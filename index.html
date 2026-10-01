@@ -58,20 +58,23 @@
 
   <main id="main">
     <section class="hero">
-      <div class="wrap">
+      <img class="hero-bg" src="assets/images/hero-palms.jpg" alt="" width="1024" height="1024" fetchpriority="high">
+      <div class="wrap hero-inner">
         <div class="hero-copy">
-          <span class="label rise">Coir &amp; cocopeat · Alappuzha, Kerala</span>
-          <h1 class="rise d1">Everything good in a coconut husk, <span>ready for your soil.</span></h1>
+          <span class="hero-kicker rise">Cocopeat &amp; coir · Alappuzha</span>
+          <h1 class="rise d1">Grown by nature.<br><span>Made in Alappuzha.</span></h1>
           <p class="hero-lede rise d2">Cocopeat, coco chips, coir fibre, geo textiles and more, made from coconut husk and supplied in retail packs or bulk.</p>
           <div class="hero-actions rise d3">
-            <a class="btn btn-wa" href="https://wa.me/919995293400?text=Hello%20KOKONAAR%2C%20I%27d%20like%20a%20quote." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="assets/images/icons.svg#wa"/></svg>Get a quote on WhatsApp</a>
-            <a class="btn btn-line" href="#products">Browse products</a>
+            <a class="btn btn-fibre" href="#products">Browse products</a>
+            <a class="btn btn-glass" href="https://wa.me/919995293400?text=Hello%20KOKONAAR%2C%20I%27d%20like%20a%20quote." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="assets/images/icons.svg#wa"/></svg>Get a quote</a>
           </div>
         </div>
-        <figure class="hero-figure">
-          <img src="assets/images/cocopeat.jpg" alt="Compressed cocopeat block beside a pile of loose cocopeat" width="900" height="900">
-          <div class="tag"><span class="chip">Low EC</span><span class="chip">Neutral pH</span><span class="chip">Washed &amp; sieved</span></div>
-        </figure>
+        <ul class="hero-cards" aria-label="Popular products">
+          <li><button class="product hero-card" type="button" data-product="cocopeat"><img src="assets/images/cocopeat_alt.jpg" alt="" width="900" height="900"><span><span class="name">Cocopeat</span><span class="sub">Blocks · briquettes · bulk</span></span></button></li>
+          <li><button class="product hero-card" type="button" data-product="coco_chips"><img src="assets/images/coco_chips.jpg" alt="" width="900" height="900"><span><span class="name">Coco Chips</span><span class="sub">For orchids &amp; aeration</span></span></button></li>
+          <li><button class="product hero-card" type="button" data-product="coir_fibre"><img src="assets/images/coir_fibre.jpg" alt="" width="900" height="900"><span><span class="name">Coir Fibre</span><span class="sub">Strong golden fibre</span></span></button></li>
+          <li><button class="product hero-card" type="button" data-product="grow_bags"><img src="assets/images/grow_bags.jpg" alt="" width="900" height="900"><span><span class="name">Grow Bags</span><span class="sub">Open top, ready to plant</span></span></button></li>
+        </ul>
       </div>
     </section>
 
@@ -105,12 +108,12 @@
       </div>
     </section>
 
-    <section class="section dark" id="cocopeat">
+    <section class="section tint" id="cocopeat">
       <div class="wrap">
         <div class="section-head">
           <span class="label">Why our cocopeat</span>
           <h2>Prepared for healthy roots</h2>
-          <p>100% natural, organic and biodegradable, with excellent aeration and drainage for strong root growth.</p>
+          <p>Carefully processed so it is clean, consistent and ready to use, with excellent aeration and drainage for strong root growth.</p>
         </div>
         <div class="facts">
           <div class="fact">
@@ -150,18 +153,20 @@
 
     <section class="section green" id="about">
       <div class="wrap about">
-        <img src="assets/images/about_img.jpg" alt="Coconut palms at sunrise in Kerala" width="900" height="900" loading="lazy">
         <div class="about-copy">
           <span class="label">About KOKONAAR</span>
           <h2>Sustainable products, made entirely from coconuts</h2>
           <p>We supply sustainable, high-quality agricultural and industrial products made from coconut husk. Using the natural strength and water retention of coconut by-products, we offer eco-friendly solutions for gardening, agriculture and soil erosion control.</p>
-          <div class="uses">
-            <span class="chip">Gardening</span>
-            <span class="chip">Agriculture</span>
-            <span class="chip">Hydroponics</span>
-            <span class="chip">Landscaping</span>
-            <span class="chip">Erosion control</span>
           </div>
+        <div class="uses-card">
+          <span class="label">Used for</span>
+          <ul class="uses">
+            <li>Gardening &amp; potting mixes</li>
+            <li>Commercial agriculture</li>
+            <li>Hydroponics &amp; greenhouses</li>
+            <li>Landscaping &amp; weed control</li>
+            <li>Soil erosion control</li>
+          </ul>
         </div>
       </div>
     </section>
