@@ -3,7 +3,8 @@
 const WHATSAPP = "919995293400";
 const wa = (text) => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`;
 
-// Mobile menu
+// Mobile menu (full-screen on phones)
+const header = document.querySelector(".site-header");
 const toggle = document.querySelector(".menu-toggle");
 const nav = document.getElementById("site-nav");
 if (toggle && nav) {
@@ -11,12 +12,28 @@ if (toggle && nav) {
   const setOpen = (open) => {
     nav.dataset.open = String(open);
     toggle.setAttribute("aria-expanded", String(open));
+    toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    const mobileOpen = open && mq.matches;
+    header.classList.toggle("menu-open", mobileOpen);
+    document.documentElement.classList.toggle("menu-locked", mobileOpen);
   };
   const sync = () => setOpen(!mq.matches);
   sync();
   mq.addEventListener("change", sync);
   toggle.addEventListener("click", () => setOpen(nav.dataset.open !== "true"));
   nav.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => { if (mq.matches) setOpen(false); }));
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && mq.matches && nav.dataset.open === "true") { setOpen(false); toggle.focus(); }
+  });
+}
+
+// Header turns solid once the hero photo has scrolled away
+const hero = document.querySelector(".hero");
+if (header && hero) {
+  const update = () => header.classList.toggle("is-solid", hero.getBoundingClientRect().bottom < header.offsetHeight);
+  update();
+  window.addEventListener("scroll", update, { passive: true });
+  window.addEventListener("resize", update);
 }
 
 // Product details
